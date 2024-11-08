@@ -1,0 +1,7 @@
+name: "Ja9ad335h Home Assistant Add-ons"
+slug: "my_custom_addons"
+description: "A repository of custom add-ons for Home Assistant"
+URL: "https://github.com/Ja9ad335h/ha-addons"
+visibility: "public"  # Set to "private" if you're keeping it private
+adds:
+  - "docker-socket-proxy"  # List the add-ons in the repo
