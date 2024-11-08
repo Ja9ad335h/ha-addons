@@ -5,6 +5,13 @@ description: Expose Docker socket securely using lscr.io/linuxserver/socket-prox
 url: https://github.com/Ja9ad335h/ha-addon
 startup: "services"
 boot: "auto"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
 map:
   - "share"
 ports:
