@@ -1,0 +1,23 @@
+name: Docker Socket Proxy
+version: 1.0
+slug: docker_socket_proxy
+description: Expose Docker socket securely using lscr.io/linuxserver/socket-proxy.
+url: https://github.com/Ja9ad335h/ha-addon
+startup: "services"
+boot: "auto"
+map:
+  - "share"
+ports:
+  2375/tcp: 2375
+apparmor: false
+environment:
+  CONTAINERS: 1
+  NETWORKS: 1
+  TASKS: 1
+  SERVICES: 1
+  INFO: 1
+  POST: 0
+devices:
+  - "/var/run/docker.sock:/var/run/docker.sock:ro"
+read_only: true
+tmpfs: "/run"
