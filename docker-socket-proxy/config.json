@@ -1,0 +1,30 @@
+{
+  "name": "Docker Socket Proxy",
+  "version": "1.0",
+  "slug": "docker_socket_proxy",
+  "description": "Expose Docker socket securely using lscr.io/linuxserver/socket-proxy.",
+  "startup": "services",
+  "boot": "auto",
+  "map": ["share"],
+  "options": {
+    "port": 2375,
+    "CONTAINERS": true,
+    "NETWORKS": true,
+    "TASKS": true,
+    "SERVICES": true,
+    "INFO": true,
+    "POST": false
+  },
+  "schema": {
+    "port": "int",
+    "CONTAINERS": "bool",
+    "NETWORKS": "bool",
+    "TASKS": "bool",
+    "SERVICES": "bool",
+    "INFO": "bool",
+    "POST": "bool"
+  },
+  "devices": ["/var/run/docker.sock:/var/run/docker.sock:ro"],
+  "read_only": true,
+  "tmpfs": "/run"
+}
