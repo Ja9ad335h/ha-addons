@@ -17,15 +17,14 @@ map:
 ports:
   2375/tcp: 2375
 apparmor: false
-options:
-  port: 2375
-  CONTAINERS: true
-  NETWORKS: true
-  TASKS: true
-  SERVICES: true
-  INFO: true
-  POST: false
-devices:
+environment:
+  - CONTAINERS=1         # Enables access to container-related endpoints
+  - NETWORKS=1           # Enables access to network-related endpoints
+  - TASKS=1              # Enables access to task-related endpoints
+  - SERVICES=1           # Enables access to service-related endpoints
+  - INFO=1               # Enables access to Docker system info
+  - POST=0               # Disables access to POST endpoints
+volumes:
   - "/var/run/docker.sock:/var/run/docker.sock:ro"
 read_only: true
 tmpfs: "/run"
