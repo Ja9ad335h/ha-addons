@@ -5,6 +5,8 @@ slug: "beszel_agent"
 init: false
 legacy: true
 host_network: true
+advanced: true
+docker_api: true
 arch:
   - amd64
   - armhf
