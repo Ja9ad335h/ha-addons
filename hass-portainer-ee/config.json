@@ -1,0 +1,45 @@
+{
+  "arch": [
+    "amd64",
+    "armv7",
+    "aarch64"
+  ],
+  "description": "Container management made easy",
+  "docker_api": true,
+  "image": "portainer/portainer-ee-{arch}",
+  "ingress": true,
+  "ingress_port": 9000,
+  "init": false,
+  "map": [
+    "share:rw",
+    "ssl"
+  ],
+	"ports": {
+		"8000/tcp": null,
+		"9000/tcp": 9000,
+		"9443/tcp": null
+	},
+	"ports_description": {
+		"8000/tcp": "Port for exposing Portainer to edge agents",
+		"9000/tcp": "Port for exposing Portainer UI (HTTP) directly",
+		"9443/tcp": "Port for exposing Portainer UI (HTTPS) directly"
+	},
+  "options": {
+    "certfile": "fullchain.pem",
+    "keyfile": "privkey.pem",
+    "password": "homeassistant",
+    "ssl": false
+  },
+  "schema": {
+    "certfile": "str",
+    "keyfile": "str",
+    "password": "str?",
+    "ssl": "bool"
+  },
+  "name": "Portainer BE",
+  "panel_icon": "mdi:docker",
+  "slug": "portaineree",
+  "startup": "services",
+  "url": "https://github.com/Ja9ad335h/ha-addons",
+  "version": "2.26.0"
+}

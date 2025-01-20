@@ -2,7 +2,7 @@ name: Docker Socket Proxy
 version: 1.0
 slug: docker_socket_proxy
 description: Expose Docker socket securely using lscr.io/linuxserver/socket-proxy.
-url: https://github.com/Ja9ad335h/ha-addon
+url: https://github.com/Ja9ad335h/ha-addons
 startup: "services"
 boot: "auto"
 arch:
