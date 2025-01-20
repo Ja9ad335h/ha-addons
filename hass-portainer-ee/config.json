@@ -6,7 +6,7 @@
   ],
   "description": "Container management made easy",
   "docker_api": true,
-  "image": "portainer/portainer-ee-{arch}",
+  "image": "portainer/portainer-ee",
   "ingress": true,
   "ingress_port": 9000,
   "init": false,
