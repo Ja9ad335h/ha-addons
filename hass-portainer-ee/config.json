@@ -6,9 +6,11 @@
   ],
   "description": "Container management made easy",
   "docker_api": true,
+  "hassio_api": true,
   "image": "portainer/portainer-ee",
   "ingress": true,
   "ingress_port": 9000,
+  "ingress_stream": true,
   "init": false,
   "map": [
     "share:rw",
